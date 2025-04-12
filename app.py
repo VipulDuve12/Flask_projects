@@ -35,10 +35,6 @@ def get_weather():
             'latitude': data['coord']['lat'],
             'longitude': data['coord']['lon'],
             'country': data['sys']['country'],
-            'visibility': data['visibility'],
-            'sunrise': data['sys']['sunrise'],
-            'sunset': data['sys']['sunset'],
-            'timezone': data['timezone'],
         }
         return render_template('index.html', weather=weather)
     else:
